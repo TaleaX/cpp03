@@ -6,7 +6,7 @@
 #    By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/16 12:22:31 by tdehne            #+#    #+#              #
-#    Updated: 2023/01/07 13:23:28 by tdehne           ###   ########.fr        #
+#    Updated: 2023/01/15 22:49:25 by tdehne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,12 +24,12 @@ CYAN	= \033[36;1m
 WHITE	= \033[37;1m
 RESET	= \033[0m
 
-NAME 		=	harlFilter
+NAME 		=	ex01
 
 OBJ_DIR		=	obj/
 
-SRC_NAME	=	main Fixed
-INC_NAME	=	Fixed
+SRC_NAME	=	main ClapTrap ScavTrap
+INC_NAME	=	ScavTrap ClapTrap
 
 SRC_FILES	=	$(addsuffix .cpp, $(SRC_NAME))
 OBJ_FILES	=	$(addsuffix .o, $(addprefix $(OBJ_DIR), $(SRC_NAME)))
@@ -47,7 +47,7 @@ $(OBJ_DIR)%.o : $(SRC_DIR)%.cpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(header) $(OBJ_DIR) $(OBJ_FILES) $(INC_FILES)
-	@$(CC) $(CFLAGS) $(OBJ_FILES) -o $(NAME)
+	@$(CC) $(OBJ_FILES) -o $(NAME)
 	@echo "$(GREEN)Done$(RESET)"
 
 $(header) :
