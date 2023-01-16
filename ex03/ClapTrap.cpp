@@ -14,7 +14,7 @@
 #include <iostream>
 
 //canonical
-ClapTrap::ClapTrap(void) {
+ClapTrap::ClapTrap(void) :  _hitPoints (10), _energyPoints(10), _attackDamage(0) {
 	std::cout << "ClapTrap Default constructor has been called" << std::endl;
 };
 
@@ -32,10 +32,10 @@ ClapTrap::ClapTrap(const ClapTrap & src) {
 }
 
 ClapTrap&	ClapTrap::operator = (const ClapTrap& rhs) {
-	this->_name = rhs.getName();
-	this->_hitPoints = rhs.getHitPoints();
-	this->_energyPoints = rhs.getEnergyPoints();
-	this->_attackDamage = rhs.getAttackDamage();
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_attackDamage = rhs._attackDamage;
 	return (*this);
 };
 
@@ -59,37 +59,37 @@ void  ClapTrap::takeDamage(unsigned int amount) {
 	std::cout << "ClapTrap " << this->_name << " health is: " << this->_hitPoints  << std::endl;
 }
 
-void ClapTrap::setName(std::string name){
-	this->_name = name;
-}
+// void ClapTrap::setName(std::string name){
+// 	this->_name = name;
+// }
 
-void ClapTrap::setHitPoints(unsigned int points){
-	this->_hitPoints = points;
-}
+// void ClapTrap::setHitPoints(unsigned int points){
+// 	this->_hitPoints = points;
+// }
 
-void ClapTrap::setEnergyPoints(unsigned int points){
-	this->_energyPoints = points;
-}
+// void ClapTrap::setEnergyPoints(unsigned int points){
+// 	this->_energyPoints = points;
+// }
 
-void ClapTrap::setAttackDamage(unsigned int aDamage){
-	this->_attackDamage = aDamage;
-}
+// void ClapTrap::setAttackDamage(unsigned int aDamage){
+// 	this->_attackDamage = aDamage;
+// }
 
 int	ClapTrap::getHitPoints(void) const {
 	return (this->_hitPoints);
 }
 
-int	ClapTrap::getEnergyPoints(void) const {
-	return (this->_energyPoints);
-}
+// int	ClapTrap::getEnergyPoints(void) const {
+// 	return (this->_energyPoints);
+// }
 
-int	ClapTrap::getAttackDamage(void) const {
-	return (this->_attackDamage);
-}
+// int	ClapTrap::getAttackDamage(void) const {
+// 	return (this->_attackDamage);
+// }
 
-std::string	ClapTrap::getName(void) const {
-	return (this->_name);
-}
+// std::string	ClapTrap::getName(void) const {
+// 	return (this->_name);
+// }
 
 // global
 std::ostream&	operator << (std::ostream& out, const ClapTrap& rhs) {

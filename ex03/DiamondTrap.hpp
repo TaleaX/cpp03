@@ -11,20 +11,23 @@
 /* ************************************************************************** */
 
 #pragma once
-#ifndef __SCAVTRAP_H__
-# define  __SCAVTRAP_H__
+#ifndef __DIAMONDTRAP_H__
+# define  __DIAMONDTRAP_H__
 
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include <string>
 
-class DiamondTrap : public ScavTrap, public FragTrap {
+class DiamondTrap : public FragTrap, public ScavTrap {
 	public:
-		// void		attack(const std::string& target);
+		void		whoAmI(void);
+		void		attack(const std::string& target);
 					DiamondTrap (const DiamondTrap& rhs);
 					DiamondTrap(std::string name);
 					DiamondTrap(void);
 					~DiamondTrap(void);
+	private:
+		std::string	_name;
 };
 
 #endif

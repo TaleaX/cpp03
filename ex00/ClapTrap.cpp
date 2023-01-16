@@ -14,7 +14,7 @@
 #include <iostream>
 
 //canonical
-ClapTrap::ClapTrap(void) {
+ClapTrap::ClapTrap(void) : _hitPoints (10), _energyPoints(10), _attackDamage(0) {
 	std::cout << "ClapTrap Default constructor has been called" << std::endl;
 };
 

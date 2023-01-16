@@ -24,12 +24,12 @@ CYAN	= \033[36;1m
 WHITE	= \033[37;1m
 RESET	= \033[0m
 
-NAME 		=	ex02
+NAME 		=	ex03
 
 OBJ_DIR		=	obj/
 
-SRC_NAME	=	main ClapTrap FragTrap
-INC_NAME	=	FragTrap ClapTrap
+SRC_NAME	=	main ClapTrap FragTrap ScavTrap DiamondTrap
+INC_NAME	=	FragTrap ClapTrap ScavTrap DiamondTrap
 
 SRC_FILES	=	$(addsuffix .cpp, $(SRC_NAME))
 OBJ_FILES	=	$(addsuffix .o, $(addprefix $(OBJ_DIR), $(SRC_NAME)))

@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #pragma once
-#ifndef __FragTRAP_H__
-# define  __FragTRAP_H__
+#ifndef __FRAGTRAP_H__
+# define  __FRAGTRAP_H__
 
 #include "ClapTrap.hpp"
 #include <string>
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 	public:
 		void		highFiveGuys(void);
 					FragTrap (const FragTrap& rhs);

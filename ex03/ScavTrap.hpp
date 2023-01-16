@@ -17,7 +17,7 @@
 #include "ClapTrap.hpp"
 #include <string>
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 	public:
 		void		guardGate(void);
 		void		attack(const std::string& target);

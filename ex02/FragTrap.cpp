@@ -16,6 +16,9 @@
 //canonical
 FragTrap::FragTrap(void) {
 	std::cout << "FragTrap Default constructor has been called" << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 }
 
 FragTrap::~FragTrap(void) {
@@ -24,13 +27,13 @@ FragTrap::~FragTrap(void) {
 
 FragTrap::FragTrap(std::string name) {
 	std::cout << "FragTrap with name: " << name << " has been created" << std::endl;
-	this->setName(name);
-	this->setHitPoints(100);
-	this->setEnergyPoints(100);
-	this->setAttackDamage(30);
+	this->_name = name;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 }
 
-FragTrap::FragTrap (const FragTrap& rhs) {
+FragTrap::FragTrap (const FragTrap& rhs) : ClapTrap(rhs){
 	std::cout << "FragTrap Copy Constructor has been called" << std::endl;
 	*this = rhs;
 }

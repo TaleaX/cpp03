@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #pragma once
-#ifndef __FragTRAP_H__
-# define  __FragTRAP_H__
+#ifndef __FRAGTRAP_H__
+# define  __FRAGTRAP_H__
 
 #include "ClapTrap.hpp"
 #include <string>

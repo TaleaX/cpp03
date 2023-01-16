@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
 int main(){
-	FragTrap bodo("Bodo");
+	DiamondTrap bodo("Bodo");
 	bodo.attack("Bumi");
 	bodo.beRepaired(1);
 	bodo.highFiveGuys();
 	bodo.takeDamage(7);
+	bodo.whoAmI();
 }

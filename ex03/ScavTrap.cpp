@@ -16,6 +16,9 @@
 //canonical
 ScavTrap::ScavTrap(void) {
 	std::cout << "ScavTrap Default constructor has been called" << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 }
 
 ScavTrap::~ScavTrap(void) {
@@ -24,13 +27,13 @@ ScavTrap::~ScavTrap(void) {
 
 ScavTrap::ScavTrap(std::string name) {
 	std::cout << "ScavTrap with name: " << name << " has been created" << std::endl;
-	this->setName(name);
-	this->setHitPoints(100);
-	this->setEnergyPoints(50);
-	this->setAttackDamage(20);
+	this->_name = name;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap (const ScavTrap& rhs) {
+ScavTrap::ScavTrap (const ScavTrap& rhs) : ClapTrap(rhs) {
 	std::cout << "ScavTrap Copy Constructor has been called" << std::endl;
 	*this = rhs;
 }
@@ -38,10 +41,10 @@ ScavTrap::ScavTrap (const ScavTrap& rhs) {
 //public member fun
 
 void ScavTrap::guardGate(void) {
-	std::cout << "ScavTrap " << this->getName() << " is now in gate keeper mode!" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " is now in gate keeper mode!" << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target) {
-	std::cout << "ScavTrap " << this->getName() << " attacks " << target << " causing " << this->getAttackDamage() << " points of damage!" << std::endl;
-	this->setEnergyPoints(this->getEnergyPoints() - 1);
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamage << " points of damage!" << std::endl;
+	this->_energyPoints--;
 }
