@@ -6,7 +6,7 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:22:40 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/15 23:04:24 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/18 18:07:39 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,13 @@ FragTrap::FragTrap (const FragTrap& rhs) : ClapTrap(rhs){
 
 void FragTrap::highFiveGuys(void) {
 	std::cout << "High five guy?" << std::endl;
+}
+
+//operator overload
+FragTrap& FragTrap::operator=(const FragTrap& rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_attackDamage = rhs._attackDamage;
+	return (*this);
 }

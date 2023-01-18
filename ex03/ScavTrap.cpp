@@ -6,7 +6,7 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:22:40 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/15 22:47:54 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/18 18:06:06 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ ScavTrap::ScavTrap(std::string name) {
 ScavTrap::ScavTrap (const ScavTrap& rhs) : ClapTrap(rhs) {
 	std::cout << "ScavTrap Copy Constructor has been called" << std::endl;
 	*this = rhs;
+}
+
+//operator overloading
+ScavTrap& ScavTrap::operator=(const ScavTrap& rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_attackDamage = rhs._attackDamage;
+	return (*this);
 }
 
 //public member fun

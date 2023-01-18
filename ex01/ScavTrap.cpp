@@ -6,12 +6,32 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:22:40 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/15 22:47:54 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/18 17:50:59 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
+
+//public member fun
+
+void ScavTrap::guardGate(void) {
+	std::cout << "ScavTrap " << this->_name << " is now in gate keeper mode!" << std::endl;
+}
+
+void ScavTrap::attack(const std::string& target) {
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamage << " points of damage!" << std::endl;
+	this->_energyPoints--;
+}
+
+//operator overloading
+ScavTrap& ScavTrap::operator=(const ScavTrap& rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_attackDamage = rhs._attackDamage;
+	return (*this);
+}
 
 //canonical
 ScavTrap::ScavTrap(void) {
@@ -33,18 +53,7 @@ ScavTrap::ScavTrap(std::string name) {
 	this->_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap (const ScavTrap& rhs) : ClapTrap(rhs) {
+ScavTrap::ScavTrap (const ScavTrap& src) : ClapTrap(src) {
 	std::cout << "ScavTrap Copy Constructor has been called" << std::endl;
-	*this = rhs;
-}
-
-//public member fun
-
-void ScavTrap::guardGate(void) {
-	std::cout << "ScavTrap " << this->_name << " is now in gate keeper mode!" << std::endl;
-}
-
-void ScavTrap::attack(const std::string& target) {
-	std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamage << " points of damage!" << std::endl;
-	this->_energyPoints--;
+	*this = src;
 }
