@@ -41,7 +41,9 @@ FragTrap::FragTrap (const FragTrap& rhs) : ClapTrap(rhs){
 //public member fun
 
 void FragTrap::highFiveGuys(void) {
-	std::cout << "High five guy?" << std::endl;
+	std::cout << B_CYN << "\n-----------------------------------------" << std::endl;
+	std::cout << "High five guys?" << std::endl;
+	std::cout << "-----------------------------------------" << RESET << std::endl;
 }
 
 //operator overload

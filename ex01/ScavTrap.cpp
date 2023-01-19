@@ -16,12 +16,20 @@
 //public member fun
 
 void ScavTrap::guardGate(void) {
+	std::cout << BH_YEL << "\n-----------------------------------------" << std::endl;
 	std::cout << "ScavTrap " << this->_name << " is now in gate keeper mode!" << std::endl;
+	std::cout << "-----------------------------------------" << RESET << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target) {
-	std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamage << " points of damage!" << std::endl;
+	std::cout << B_RED << "\n-----------------------------------------" << std::endl;
+	std::cout << "ATTACK" << RESET << std::endl;
+	std::cout << BH_YEL << "ScavTrap " << this->_name <<" attacks "  << target << RESET << std::endl;
+	std::cout << "Bumi receives " << this->_attackDamage << " points of damage!" << std::endl;
 	this->_energyPoints--;
+	std::cout << BH_GRN << "Health: " << RESET << this->_hitPoints << std::endl;
+	std::cout << BH_MAG  << "Energy: " << RESET << this->_energyPoints  << std::endl;
+	std::cout << B_RED << "-----------------------------------------" << RESET << std::endl;
 }
 
 //operator overloading

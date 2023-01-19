@@ -42,37 +42,36 @@ ClapTrap&	ClapTrap::operator = (const ClapTrap& rhs) {
 //public member functions
 
 void ClapTrap::attack(const std::string& target) {
-	std::cout << "ClapTrap " << this->_name << " attacks " << target << " causing " << this->_attackDamage << " points of damage!" << std::endl;
+	std::cout << B_RED << "\n-----------------------------------------" << std::endl;
+	std::cout << "ATTACK" << RESET << std::endl;
+	std::cout << B_BLU << "ClapTrap " << this->_name <<" attacks "  << target << RESET << std::endl;
+	std::cout << "Bumi receives " << this->_attackDamage << " points of damage!" << std::endl;
 	this->_energyPoints--;
+	std::cout << BH_GRN << "Health: " << RESET << this->_hitPoints << std::endl;
+	std::cout << BH_MAG << "Energy: " << RESET << this->_energyPoints  << std::endl;
+	std::cout << B_RED << "-----------------------------------------" << RESET << std::endl;
+
 }
 
 void  ClapTrap::beRepaired(unsigned int amount) {
-	std::cout << "ClapTrap " << this->_name << " repairs itself and gets " << amount << " hitpoints " << std::endl;
+	std::cout << B_GRN << "\n-----------------------------------------" << std::endl;
+	std::cout << "REPAIR" << RESET  << std::endl;
+	std::cout << B_BLU << "ClapTrap " << this->_name << " heals itself:" << RESET << " +" << amount << std::endl;
 	this->_hitPoints += amount;
-	std::cout << "ClapTrap " << this->_name << " health is: " << this->_hitPoints  << std::endl;
 	this->_energyPoints--;
+	std::cout << BH_GRN << "Health: " << RESET << this->_hitPoints << std::endl;
+	std::cout << BH_MAG << "Energy: " << RESET << this->_energyPoints  << std::endl;
+	std::cout << B_GRN << "-----------------------------------------" << RESET << std::endl;
 }
 
 void  ClapTrap::takeDamage(unsigned int amount) {
-	std::cout << "ClapTrap " << this->_name << " takes " << amount << " damage " << std::endl;
+	std::cout << B_YEL << "\n-----------------------------------------" << std::endl;
+	std::cout << "DAMAGE" << RESET << std::endl;
+	std::cout << B_BLU << "ClapTrap " << this->_name << " got hit:" << RESET << " -" << amount << std::endl;
 	this->_hitPoints -= amount;
-	std::cout << "ClapTrap " << this->_name << " health is: " << this->_hitPoints  << std::endl;
-}
-
-void ClapTrap::setName(std::string name){
-	this->_name = name;
-}
-
-void ClapTrap::setHitPoints(unsigned int points){
-	this->_hitPoints = points;
-}
-
-void ClapTrap::setEnergyPoints(unsigned int points){
-	this->_energyPoints = points;
-}
-
-void ClapTrap::setAttackDamage(unsigned int aDamage){
-	this->_attackDamage = aDamage;
+	std::cout << BH_GRN << "Health: " << RESET << this->_hitPoints << std::endl;
+	std::cout << BH_MAG << "Energy: " << RESET << this->_energyPoints  << std::endl;
+	std::cout << B_YEL << "-----------------------------------------" << RESET << std::endl;
 }
 
 int	ClapTrap::getHitPoints(void) const {

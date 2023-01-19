@@ -43,6 +43,8 @@ void DiamondTrap::attack(const std::string& target) {
 }
 
 void DiamondTrap::whoAmI(void) {
+    std::cout << BH_CYN << "\n-----------------------------------------" << std::endl;
     std::cout << "Claptrap name: " << ClapTrap::_name << std::endl;
     std::cout << "Diamondtrap name: " << this->_name << std::endl;
+	std::cout << "-----------------------------------------" << RESET << std::endl;
 }
