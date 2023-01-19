@@ -6,7 +6,7 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:22:40 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/18 17:50:59 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/19 14:38:04 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& rhs) {
 //canonical
 ScavTrap::ScavTrap(void) {
 	std::cout << "ScavTrap Default constructor has been called" << std::endl;
+	this->_name = "";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;

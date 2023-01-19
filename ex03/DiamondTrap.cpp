@@ -6,7 +6,7 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:11:42 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/17 13:11:44 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/19 14:39:19 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ DiamondTrap::DiamondTrap(const DiamondTrap& rhs) : ClapTrap(rhs), FragTrap(rhs),
 
 DiamondTrap::DiamondTrap(std::string name) {
     std::cout << "DiamonTrap constructor called" << std::endl;
-    ClapTrap::_name = name + "_clap_name";
-    this->_name = ClapTrap::_name;
+    ClapTrap::_name = name;
+    this->_name = ClapTrap::_name + "_clap_name";
     this->_attackDamage = FragTrap::_attackDamage;
     this->_hitPoints = FragTrap::_hitPoints;
     this->_energyPoints = ScavTrap::_energyPoints;

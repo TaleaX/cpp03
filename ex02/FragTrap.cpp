@@ -6,7 +6,7 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 22:22:40 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/18 19:42:50 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/19 14:38:24 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 //canonical
 FragTrap::FragTrap(void) {
 	std::cout << "FragTrap Default constructor has been called" << std::endl;
+	this->_name = "";
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;

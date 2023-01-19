@@ -6,7 +6,7 @@
 /*   By: tdehne <tdehne@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 21:39:19 by tdehne            #+#    #+#             */
-/*   Updated: 2023/01/15 22:45:45 by tdehne           ###   ########.fr       */
+/*   Updated: 2023/01/19 14:37:14 by tdehne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 //canonical
-ClapTrap::ClapTrap(void) : _hitPoints (10), _energyPoints(10), _attackDamage(0) {
+ClapTrap::ClapTrap(void) : _name(""), _hitPoints (10), _energyPoints(10), _attackDamage(0) {
 	std::cout << "ClapTrap Default constructor has been called" << std::endl;
 };
 
