@@ -14,9 +14,9 @@
 #include <iostream>
 
 //canonical
-FragTrap::FragTrap(void) {
+FragTrap::FragTrap(void){
 	std::cout << "FragTrap Default constructor has been called" << std::endl;
-	this->_name = "";
+	this->_name = "FragTrap";
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;

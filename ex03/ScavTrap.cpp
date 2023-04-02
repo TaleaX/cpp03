@@ -16,7 +16,7 @@
 //canonical
 ScavTrap::ScavTrap(void) {
 	std::cout << "ScavTrap Default constructor has been called" << std::endl;
-	this->_name = "";
+	this->_name = "ScavTrap";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
